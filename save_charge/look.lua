@@ -3,19 +3,16 @@ function lookdraw()
     --mana
     love.graphics.print("charge game : ", 0, 0)
     love.graphics.print("regen mana passive : "..manaprint.passivmana, 0, 12)
-    love.graphics.print("regen avec space : "..manaprint.spacemana, 0, 24)
-    love.graphics.print("cout mana q : "..manaprint.manaq, 0, 36)
-    love.graphics.print("mana : "..math.ceil(manaprint.mana), 0, 48)
-    love.graphics.print("mana max : "..manaprint.manamax, 0, 60)
+    love.graphics.print("mana : "..math.ceil(manaprint.mana), 0, 24)
+    love.graphics.print("mana max : "..manaprint.manamax, 0, 36)
     --vie
-    love.graphics.print("regen vie passive : "..vieprint.passivvie, 0, 80)
-    love.graphics.print("regen vie q : "..vieprint.vieq, 0, 92)
-    love.graphics.print("vie : "..math.ceil(vieprint.vie), 0, 104)
-    love.graphics.print("vie max : "..vieprint.viemax, 0, 116)
+    love.graphics.print("regen vie passive : "..vieprint.passivvie, 0, 56)
+    love.graphics.print("vie : "..math.ceil(vieprint.vie), 0, 68)
+    love.graphics.print("vie max : "..vieprint.viemax, 0, 80)
     --level
-    love.graphics.print("votre level : "..levelprint.level, 0, 136)
-    love.graphics.print("votre xp : "..level.xp, 0, 148)
-    love.graphics.print("l'xp manquante : "..level.xpmaxlevel - level.xp, 0, 160)
+    love.graphics.print("votre level : "..levelprint.level, 0, 100)
+    love.graphics.print("votre xp : "..level.xp, 0, 112)
+    love.graphics.print("l'xp manquante : "..level.xpmaxlevel - level.xp, 0, 124)
 end
 function lookkey(key)
     if key == "p" then

@@ -1,8 +1,6 @@
 function manaload()
     mana = {}
     mana.passivmana = 0.02
-    mana.spacemana = 10
-    mana.manaq = 10
     mana.mana = 200
     mana.manamax = 200
 end
@@ -15,9 +13,6 @@ function manaupdate(dt)
     end
     if mana.mana < 0 then
         mana.mana = 0
-    end
-    if love.keyboard.isDown("space") then
-            mana.mana = mana.mana + (mana.spacemana * dt)
     end
 end
 function manadraw()

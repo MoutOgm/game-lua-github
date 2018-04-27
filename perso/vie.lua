@@ -3,7 +3,6 @@ function vieload()
     vie.vie = 200
     vie.viemax = 200
     vie.passivvie = 0.002
-    vie.vieq = 20
 end
 function vieupdate(dt)
     vie.passivvie = 0.002
@@ -17,10 +16,6 @@ function vieupdate(dt)
         game = false
         lookcharge = false
         restart = true
-    end
-    if  love.keyboard.isDown("a") and vie.vie < vie.viemaxlevel then
-        mana.mana = mana.mana - (mana.manaq * dt)
-        vie.vie = vie.vie + (vie.vieq * dt)
     end
 end
 function viedraw()
