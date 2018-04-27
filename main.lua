@@ -4,63 +4,63 @@ require("perso/vie")
 require("perso/level")
 require("menu")
 require("restart")
-require("save-charge/look")
-require("save-charge/save")
-require("save-charge/charge")
+require("save_charge/look")
+require("save_charge/save")
+require("save_charge/charge")
 function love.load()
-    width = love.graphics.getWidth()
-    height  = love.graphics.getHeight()
-    yrec = 10
-    love.window.setFullscreen(true)
+  width = love.graphics.getWidth()
+  height  = love.graphics.getHeight()
+  yrec = 10
+  love.window.setFullscreen(true)
 
-    lookcharge = false
-    game = false
+  lookcharge = false
+  game = false
 
-    menuload()
-    manaload()
-    vieload()
-    levelload()
+  menuload()
+  manaload()
+  vieload()
+  levelload()
 end
 function love.update(dt)
-    if game == true then
-      levelupdate(dt)
-      manaupdate(dt)
-      vieupdate(dt)
-      restartupdate(dt)
-    end
-    if menu == true then
-        menuupdate(dt)
-    end
+  if game == true then
+    levelupdate(dt)
+    manaupdate(dt)
+    vieupdate(dt)
+    restartupdate(dt)
+  end
+  if menu == true then
+    menuupdate(dt)
+  end
 end
 function love.draw()
-    --montre menu
-    if menu == true then
-        menudraw()
-        restartdraw()
-    end
-    --montre jeu
-    if game == true then
-        manadraw()
-        viedraw()
-        leveldraw()
-    end
-    --montre game a charger
-    if lookcharge == true then
-        lookdraw()
-    end
+  --montre menu
+  if menu == true then
+    menudraw()
+    restartdraw()
+  end
+  --montre jeu
+  if game == true then
+    manadraw()
+    viedraw()
+    leveldraw()
+  end
+  --montre game a charger
+  if lookcharge == true then
+    lookdraw()
+  end
 
 end
 function love.keypressed(key)
-    --quitter
-    if key == "escape" then
-        love.event.quit()
-    end
-    --charger
-    keypressedcharge(key)
-    --voir game a charger
-    lookkey(key)
-    --entrer / sortir menu
-    keypressedmenu(key)
-    --enregistrer game
-    keypressedsave(key)
+  --quitter
+  if key == "escape" then
+    love.event.quit()
+  end
+  --charger
+  keypressedcharge(key)
+  --voir game a charger
+  lookkey(key)
+  --entrer / sortir menu
+  keypressedmenu(key)
+  --enregistrer game
+  keypressedsave(key)
 end

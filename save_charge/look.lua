@@ -21,13 +21,13 @@ function lookkey(key)
                 game = true
             elseif lookcharge == false then
 
-                mana1 = love.filesystem.read("save/mana") --charge mana
+                mana1 = love.filesystem.read("mana") --charge mana
                 manaprint = json.decode(mana1) -- tradcharge mana
 
-                vie1 = love.filesystem.read("save/vie") --charge vie
+                vie1 = love.filesystem.read("vie") --charge vie
                 vieprint = json.decode(vie1) -- tradcharge vie
 
-                level1 = love.filesystem.read("save/level") --charge level
+                level1 = love.filesystem.read("level") --charge level
                 levelprint = json.decode(level1) -- tradcharge level
 
                 lookcharge = true
