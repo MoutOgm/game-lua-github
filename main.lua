@@ -7,6 +7,7 @@ require("restart")
 require("save_charge/look")
 require("save_charge/save")
 require("save_charge/charge")
+require("world/world")
 function love.load()
   width = love.graphics.getWidth()
   height  = love.graphics.getHeight()
@@ -20,6 +21,7 @@ function love.load()
   manaload()
   vieload()
   levelload()
+  worldload()
 end
 function love.update(dt)
   if game == true then
@@ -27,6 +29,7 @@ function love.update(dt)
     manaupdate(dt)
     vieupdate(dt)
     restartupdate(dt)
+    worldupdate(dt)
   end
   if menu == true then
     menuupdate(dt)
@@ -43,6 +46,7 @@ function love.draw()
     manadraw()
     viedraw()
     leveldraw()
+    worlddraw()
   end
   --montre game a charger
   if lookcharge == true then

@@ -22,7 +22,7 @@ function manaupdate(dt)
 end
 function manadraw()
     love.graphics.setColor(20, 20, 255)
-    love.graphics.rectangle("fill",width/2 - 100, height - 200, pourcentmana * 2, yrec)
+    love.graphics.rectangle("fill",0, 10, pourcentmana * 2, yrec)
     love.graphics.setColor(255, 255, 20)
-    love.graphics.print(math.ceil(mana.mana), width/2 - 10 , height - 202)
+    love.graphics.print(math.ceil(mana.mana), 100 - 10 , 8)
 end

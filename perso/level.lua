@@ -5,8 +5,6 @@ function levelload()
   level.xpmax = 0
 end
 function levelupdate(dt)
-
-  level.xp = 100
   if level.level == 1 then
     level.xpmaxlevel = level.xpmax + 50 * level.level
     mana.manamaxlevel = mana.manamax
@@ -34,8 +32,9 @@ function levelupdate(dt)
 end
 function leveldraw()
   love.graphics.setColor(255, 255, 255)
-  love.graphics.rectangle("fill",width/2 - 100, height - 190, pourcentxp * 2, yrec)
-  love.graphics.print("level : "..level.level, width/2 - 21, height - 179)
+  love.graphics.rectangle("fill",0, 30, pourcentxp * 2, yrec)
+  love.graphics.print("level : "..level.level, 100 - 21, 28)
   love.graphics.setColor(255, 20, 20)
-  love.graphics.print(math.ceil(level.xp), width/2 - 10 , height - 192)
+  love.graphics.print(math.ceil(level.xp), 100 - 10 , 18)
+  love.graphics.setColor(255, 255, 255)
 end

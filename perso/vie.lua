@@ -25,7 +25,7 @@ function vieupdate(dt)
 end
 function viedraw()
     love.graphics.setColor(20, 255, 20)
-    love.graphics.rectangle("fill",width/2 - 100, height - 210, pourcentvie * 2, yrec)
+    love.graphics.rectangle("fill",0, 0, pourcentvie * 2, yrec)
     love.graphics.setColor(255, 20, 255)
-    love.graphics.print(math.ceil(vie.vie), width/2 - 10 , height - 212)
+    love.graphics.print(math.ceil(vie.vie), 100 - 10, - 2)
 end
