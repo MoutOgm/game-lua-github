@@ -8,10 +8,10 @@ function manaload()
 end
 function manaupdate(dt)
     mana.passivmana = 0.02
-    pourcentmana = (mana.mana / mana.manamax)*100
+    pourcentmana = (mana.mana / mana.manamaxlevel)*100
     mana.mana = mana.mana + mana.passivmana
-    if mana.mana >= mana.manamax then
-        mana.mana = mana.manamax
+    if mana.mana >= mana.manamaxlevel then
+        mana.mana = mana.manamaxlevel
     end
     if mana.mana < 0 then
         mana.mana = 0

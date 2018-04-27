@@ -6,12 +6,19 @@ function levelload()
 end
 function levelupdate(dt)
   pourcentxp = (level.xp / level.xpmax) * 100
-  if level.level == 1 then
-    level.xpmax = level.xpmax + 50
+  if level.level < 10 then
+    level.xpmaxlevel = level.xpmax + 50 * level.level
   elseif level.level <= 5 and level.level > 1 then
-    mana.mana = mana.mana + 10 * level.level
-    vie.vie = vie.vie + 10 * level.level
-    level.xpmax = level.xpmax + 50 * level.level
+    mana.manamaxlevel = mana.manamax + 10 * level.level
+    vie.viemaxlevel = vie.viemax + 10 * level.level
+    level.xpmaxlevel = level.xpmax + 50 * level.level
+  elseif level.level <= 10 and level.level > 5 then
+    mana.manamaxlevel = mana.manamax + 20 * level.level
+    vie.viemaxlevel = vie.viemax + 20 * level.level
+    level.xpmaxlevel = level.xpmax + 100 * level.level
+  elseif level > 10 then
+    level.level = 10
+    level.xp = level.xpmaxlevel
   end
 end
 function leveldraw()

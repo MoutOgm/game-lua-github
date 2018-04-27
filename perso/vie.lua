@@ -7,10 +7,10 @@ function vieload()
 end
 function vieupdate(dt)
     vie.passivvie = 0.002
-    pourcentvie = (vie.vie / vie.viemax) * 100
+    pourcentvie = (vie.vie / vie.viemaxlevel) * 100
     vie.vie = vie.vie + vie.passivvie
-    if vie.vie >= vie.viemax then
-        vie.vie = vie.viemax
+    if vie.vie >= vie.viemaxlevel then
+        vie.vie = vie.viemaxlevel
     end
     if vie.vie < 0 then
         menu = true
@@ -18,7 +18,7 @@ function vieupdate(dt)
         lookcharge = false
         restart = true
     end
-    if  love.keyboard.isDown("a") and vie.vie < vie.viemax then
+    if  love.keyboard.isDown("a") and vie.vie < vie.viemaxlevel then
         mana.mana = mana.mana - (mana.manaq * dt)
         vie.vie = vie.vie + (vie.vieq * dt)
     end
