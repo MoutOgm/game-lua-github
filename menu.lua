@@ -13,3 +13,16 @@ function menudraw()
     love.graphics.print("sauvegarder : \'l\'", 0, 24)
     love.graphics.print("voir derniere sauvegarde (en jeu) \'p\'", 0, 36)
 end
+function keypressedmenu(key)
+  if key == "n" then
+      if game == true or lookcharge == true then
+          menu = true
+          game = false
+          lookcharge = false
+      elseif game == false and lookcharge == false then
+          game = true
+          menu = false
+          restart = false
+      end
+  end
+end
