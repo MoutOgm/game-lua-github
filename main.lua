@@ -23,9 +23,10 @@ function love.load()
 end
 function love.update(dt)
     if game == true then
-        manaupdate(dt)
-        vieupdate(dt)
-        restartupdate(dt)
+      levelupdate(dt)
+      manaupdate(dt)
+      vieupdate(dt)
+      restartupdate(dt)
     end
     if menu == true then
         menuupdate(dt)

@@ -27,10 +27,12 @@ function lookkey(key)
                 vie1 = love.filesystem.read("save/vie") --charge vie
                 vieprint = json.decode(vie1) -- tradcharge vie
 
+                level1 = love.filesystem.read("save/level") --charge level
+                levelprint = json.decode(level1) -- tradcharge level
+
                 lookcharge = true
                 game = false
             end
         end
     end
 end
-
