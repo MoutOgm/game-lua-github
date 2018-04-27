@@ -9,6 +9,9 @@ function keypressedsave(key)
     saverstringlevel = json.encode(level) -- tradsave level
     saverendlevel = love.filesystem.write("level", saverstringlevel)  --save level
 
+    saverstringworld = json.encode(world) -- save world
+    saverendworld = love.filesystem.write("world", saverstringworld) --tradsave world
+
     mana1 = love.filesystem.read("mana") --charge mana
     manaprint = json.decode(mana1) -- tradcharge mana
 
@@ -17,5 +20,7 @@ function keypressedsave(key)
 
     level1 = love.filesystem.read("level") --charge level
     levelprint = json.decode(level1) -- tradcharge level
+
+    world1 = love.filesystem.read("world") --charge world
   end
 end
