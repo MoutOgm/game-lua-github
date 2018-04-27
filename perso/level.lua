@@ -16,7 +16,7 @@ function levelupdate(dt)
 end
 function leveldraw()
   love.graphics.setColor(255, 255, 255)
-  love.graphics.rectangle("fill",width/2 - 100, height - 190, 100, yrec / 2)
-
-
+  love.graphics.rectangle("fill",width/2 - 100, height - 190, pourcentxp * 2, yrec / 2)
+  love.graphics.setColor(255, 20, 20)
+  love.graphics.print(math.ceil(level.xp), width/2 - 5 , height - 192)
 end

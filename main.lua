@@ -42,6 +42,7 @@ function love.draw()
     if game == true then
         manadraw()
         viedraw()
+        leveldraw()
     end
     --montre game a charger
     if lookcharge == true then
