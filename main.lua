@@ -21,7 +21,6 @@ function love.load()
   manaload()
   vieload()
   levelload()
-  worldload()
 end
 function love.update(dt)
   if game == true then
@@ -29,7 +28,6 @@ function love.update(dt)
     manaupdate(dt)
     vieupdate(dt)
     restartupdate(dt)
-    worldupdate(dt)
   end
   if menu == true then
     menuupdate(dt)
@@ -46,7 +44,6 @@ function love.draw()
     manadraw()
     viedraw()
     leveldraw()
-    worlddraw()
   end
   --montre game a charger
   if lookcharge == true then
