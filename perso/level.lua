@@ -35,6 +35,7 @@ end
 function leveldraw()
   love.graphics.setColor(255, 255, 255)
   love.graphics.rectangle("fill",width/2 - 100, height - 190, pourcentxp * 2, yrec)
+  love.graphics.print("level : "..level.level, width/2 - 21, height - 179)
   love.graphics.setColor(255, 20, 20)
-  love.graphics.print(math.ceil(level.xp), width/2 - 5 , height - 192)
+  love.graphics.print(math.ceil(level.xp), width/2 - 10 , height - 192)
 end

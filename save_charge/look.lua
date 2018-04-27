@@ -12,6 +12,10 @@ function lookdraw()
     love.graphics.print("regen vie q : "..vieprint.vieq, 0, 92)
     love.graphics.print("vie : "..math.ceil(vieprint.vie), 0, 104)
     love.graphics.print("vie max : "..vieprint.viemax, 0, 116)
+    --level
+    love.graphics.print("votre level : "..levelprint.level, 0, 136)
+    love.graphics.print("votre xp : "..level.xp, 0, 148)
+    love.graphics.print("l'xp manquante : "..level.xpmaxlevel - level.xp, 0, 160)
 end
 function lookkey(key)
     if key == "p" then
