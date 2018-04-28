@@ -1,8 +1,8 @@
 function keypressedcharge(key)
   if key == "m" then
-    game = json.decode(love.filesystem.read("game"))
-    mana = game.mana
-    vie = game.vie
-    level = game.level
+    gamesave = json.decode(love.filesystem.read("game"))
+    mana = gamesave.mana
+    vie = gamesave.vie
+    level = gamesave.level
   end
 end

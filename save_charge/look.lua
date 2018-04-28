@@ -21,10 +21,10 @@ function lookkey(key)
         lookcharge = false
         game = true
       elseif lookcharge == false then
-        game = json.decode(love.filesystem.read("game"))
-        manaprint = game.mana
-        vieprint = game.vie
-        levelprint = game.level
+        gamesave= json.decode(love.filesystem.read("game"))
+        manaprint = gamesave.mana
+        vieprint = gamesave.vie
+        levelprint = gamesave.level
 
         lookcharge = true
         game = false
