@@ -4,8 +4,10 @@ gamera = require("lib/gamera")
 require("perso/mana")
 require("perso/vie")
 require("perso/level")
+require("perso/player")
 require("menu")
 require("restart")
+require("world")
 require("save_charge/look")
 require("save_charge/save")
 require("save_charge/charge")
@@ -22,6 +24,14 @@ function love.load()
   manaload()
   vieload()
   levelload()
+
+  cols_len = 0
+  world = bump.newWorld()
+  grave = 10
+
+  addworld()
+  playerload()
+
 end
 function love.update(dt)
   if game == true then
@@ -29,6 +39,9 @@ function love.update(dt)
     manaupdate(dt)
     vieupdate(dt)
     restartupdate(dt)
+
+    cols_len = 0
+    playerupdate(dt)
   end
   if menu == true then
     menuupdate(dt)
@@ -45,6 +58,9 @@ function love.draw()
     manadraw()
     viedraw()
     leveldraw()
+
+    drawworld()
+    playerdraw()
   end
   --montre game a charger
   if lookcharge == true then
