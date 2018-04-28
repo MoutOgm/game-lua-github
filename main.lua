@@ -1,4 +1,6 @@
-json = require("json")
+json = require("lib/json")
+bump = require("lib/bump")
+gamera = require("lib/gamera")
 require("perso/mana")
 require("perso/vie")
 require("perso/level")
