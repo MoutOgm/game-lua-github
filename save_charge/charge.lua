@@ -1,5 +1,6 @@
 function keypressedcharge(key)
   if key == "m" then
+    world:remove(player, world:getRect(player))
     gamesave = json.decode(love.filesystem.read("game"))
     mana = gamesave.mana
     vie = gamesave.vie
