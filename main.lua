@@ -50,7 +50,17 @@ function love.update(dt)
   if menu == true then
     menuupdate(dt)
   end
-  return printer
+
+  local debuggame = json.decode(love.filesystem.read("game"))
+  local debugmana = debuggame.mana
+  local debugvie = debuggame.vie
+  local debuglevel = debuggame.level
+  local debugplayer = debuggame.player
+  print("player.x a charger = "..debugplayer.x)
+  print("player.y a charger = "..debugplayer.y)
+  print("player.x = "..player.x)
+  print("player.y = "..player.y)
+
 end
 function love.draw()
   --montre menu
