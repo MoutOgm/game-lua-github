@@ -1,6 +1,5 @@
 function playerload()
   player = {x = 50, y = 50, w = 25, h = 25, speed = 100}
-  world:add(player, player.x, player.y, player.w, player.h)
   jump = false
   onground = false
   friction = 20

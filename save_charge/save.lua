@@ -4,6 +4,7 @@ function keypressedsave(key)
       mana = mana,
       vie = vie,
       level = level,
+      player = player
     }))
   end
 end

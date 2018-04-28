@@ -4,5 +4,7 @@ function keypressedcharge(key)
     mana = gamesave.mana
     vie = gamesave.vie
     level = gamesave.level
+    player = gamesave.player
+    world:add(player, player.x, player.y, player.w, player.h)
   end
 end
