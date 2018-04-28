@@ -3,6 +3,8 @@ function manaload()
     mana.passivmana = 0.02
     mana.mana = 200
     mana.manamax = 200
+    mana.space = 50
+    mana.min = 10
 end
 function manaupdate(dt)
     mana.passivmana = 0.02

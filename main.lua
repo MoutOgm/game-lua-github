@@ -39,8 +39,6 @@ function love.update(dt)
     manaupdate(dt)
     vieupdate(dt)
     restartupdate(dt)
-
-    cols_len = 0
     playerupdate(dt)
   end
   if menu == true then
@@ -58,8 +56,7 @@ function love.draw()
     manadraw()
     viedraw()
     leveldraw()
-
-    drawworld()
+    worlddraw()
     playerdraw()
   end
   --montre game a charger

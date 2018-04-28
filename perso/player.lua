@@ -8,9 +8,10 @@ function playerload()
   jumpAcc = 500
   jumpMaxSpeed = 9.5
   dymax = 50
+  cols_len = 0
 end
 function playerupdate(dt)
-  dx, dy = 0, 0
+  local dx, dy = 0, 0
 
   dx = dx * (1 - math.min(dt * friction, 1))
   dy = dy * (1 - math.min(dt * friction, 1))
@@ -21,9 +22,10 @@ function playerupdate(dt)
   elseif love.keyboard.isDown("q") and dx > - maxSpeed then
     dx = - player.speed * dt
   end
-  if love.keyboard.isDown("z") then
-    if dy <  jumpMaxSpeed then
+  if love.keyboard.isDown("space") then
+    if mana.mana > mana.min then
       dy = dy - jumpAcc * dt
+      mana.mana = mana.mana - mana.space * dt
     end
   end
 
