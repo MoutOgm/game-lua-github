@@ -38,5 +38,8 @@ function playerupdate(dt)
   end
 end
 function playerdraw()
-  love.graphics.rectangle('fill', world:getRect(player))
+  love.graphics.setColor(20, 20, 255, 70)
+  love.graphics.rectangle("fill", world:getRect(player))
+  love.graphics.setColor(20, 20, 255)
+  love.graphics.rectangle("line", world:getRect(player))
 end

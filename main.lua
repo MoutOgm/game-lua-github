@@ -11,6 +11,7 @@ require("world")
 require("save_charge/look")
 require("save_charge/save")
 require("save_charge/charge")
+require("cam")
 function love.load()
   width = love.graphics.getWidth()
   height  = love.graphics.getHeight()
@@ -32,6 +33,8 @@ function love.load()
   addworld()
   playerload()
 
+  camload()
+
 end
 function love.update(dt)
   if game == true then
@@ -40,6 +43,8 @@ function love.update(dt)
     vieupdate(dt)
     restartupdate(dt)
     playerupdate(dt)
+
+    camupdate(dt)
   end
   if menu == true then
     menuupdate(dt)
@@ -56,8 +61,10 @@ function love.draw()
     manadraw()
     viedraw()
     leveldraw()
-    worlddraw()
-    playerdraw()
+    cam:draw(function()
+      worlddraw()
+      playerdraw()
+    end)
   end
   --montre game a charger
   if lookcharge == true then

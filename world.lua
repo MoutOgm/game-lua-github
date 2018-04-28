@@ -7,5 +7,8 @@ function addworld()
   -- terrain
 end
 function worlddraw()
-  love.graphics.rectangle('fill', world:getRect(ground[1]))
+  love.graphics.setColor(10, 255, 30, 70)
+  love.graphics.rectangle("fill", world:getRect(ground[1]))
+  love.graphics.setColor(10, 255, 30)
+  love.graphics.rectangle("line", world:getRect(ground[1]))
 end
