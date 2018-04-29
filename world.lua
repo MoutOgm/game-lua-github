@@ -1,14 +1,14 @@
 function addworld()
   -- world
   ground = {}
-  ground[1] = {x = 0, y = 850, w = 4800, h = 50}
+  ground[1] = {x = 0, y = 850, w = 1600, h = 50}
   world:add(ground[1], ground[1].x, ground[1].y, ground[1].w, ground[1].h)
   grav = 200
   -- terrain
   local num = 1
   block = {}
   for num = 1, 10, 1 do
-    block[num] = {x = math.random(0, 4750), y = math.random(0, 750), w = 50, h = 50}
+    block[num] = {x = math.random(0, 1550), y = math.random(0, 750), w = 50, h = 50}
     world:add(block[num], block[num].x, block[num].y, block[num].w, block[num].h)
   end
 end

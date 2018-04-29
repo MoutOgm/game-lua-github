@@ -1,5 +1,5 @@
 function camload()
-  camworld = {width = 4800, height = 900}
+  camworld = {width = 1600, height = 900}
   cam = gamera.new(0, 0, 1600, 900)
   cam:setWorld(0, 0, camworld.width, camworld.height)
 end
