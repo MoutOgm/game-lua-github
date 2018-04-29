@@ -6,7 +6,7 @@ function addworld()
   grav = 200
   -- terrain
   local numblock = 1
-  local numennemis = math.math.random(25, 50)
+  local numennemis = math.random(25, 50)
   block = {}
   for numblock = 1, 10, 1 do
     block[numblock] = {x = math.random(0, 4750), y = math.random(0, 750), w = 50, h = 50}
