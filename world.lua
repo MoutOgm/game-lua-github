@@ -1,4 +1,5 @@
 function addworld()
+  math.randomseed(os.time())
   -- world
   ground = {}
   ground[1] = {x = 0, y = 850, w = 4800, h = 50}
